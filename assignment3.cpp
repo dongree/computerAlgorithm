@@ -40,7 +40,7 @@ void merge_sort(int list[], int left, int right){
 int main(){
 	int n;
 	
-	printf("정수를 입력하세요 : ");
+	printf("please input a number : ");
 	scanf("%d\n", &n);
 	
 	int arr[n];
