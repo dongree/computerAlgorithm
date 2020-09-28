@@ -49,11 +49,9 @@ int main(){
 		scanf("%d", &arr[i]);
 	}
 	
-	int length = sizeof(arr) / sizeof(int);
+	merge_sort(arr, 0, n);
 	
-	merge_sort(arr, 0, length);
-	
-	for(int k=0; k<length; k++){
+	for(int k=0; k<n; k++){
 		printf("%d ", arr[k]);
 	}
 	
