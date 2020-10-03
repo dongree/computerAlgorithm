@@ -1,5 +1,6 @@
 ex_list = [['고동우', 'IELTS', 6.5, 4.0], ['지석진', 'TOEFL', 97, 3.8], ['김종국', 'TOEFL', 74, 4.3], ['유재석', 'IELTS', 7.0, 4.1], [
     '하동훈', 'IELTS', 5.5, 3.7], ['이광수', 'TOEFL', 79, 2.9], ['송지효', 'IELTS', 6.0, 4.3], ['양세찬', 'TOEFL', 70, 3.3], ['전소민', 'TOEFL', 84, 4.5]]
+# ['name, '어학 시험 종류', 어학 점수, 학점]
 
 
 def selection_sort(arr):
@@ -73,6 +74,6 @@ print('셰필드 대학교 교환학생 모집인원 : 4명\n')
 print('<결과>')
 for i in range(len(sorted_list)):
     if i < 4:
-        print(i+1, '등:', sorted_list[i][0], '합격')
+        print(i+1, '등:', sorted_list[i][0], '합격', '| 점수:', sorted_list[i][4])
     else:
-        print(i+1, '등:', sorted_list[i][0], '불합격')
+        print(i+1, '등:', sorted_list[i][0], '불합격', '| 점수:', sorted_list[i][4])
