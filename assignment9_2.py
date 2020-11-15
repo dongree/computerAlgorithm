@@ -15,12 +15,12 @@ def knapSack(W, items, n):
     k = [[0 for x in range(W+1)] for x in range(n+1)]
 
     for i in range(n+1):
+        item = items_sorted[i-1]
         for w in range(W+1):
             if i == 0 or w == 0:
                 k[i][w] = 0
-            elif items_sorted[i-1][2] <= w:
-                k[i][w] = max(items_sorted[i-1][1] + k[i-1]
-                              [w-items_sorted[i-1][2]], k[i-1][w])
+            elif item[2] <= w:
+                k[i][w] = max(item[1] + k[i-1][w-item[2]], k[i-1][w])
             else:
                 k[i][w] = k[i-1][w]
     return k[n][W]
