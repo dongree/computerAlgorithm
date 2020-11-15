@@ -12,7 +12,7 @@ items = [(1, 60, 10), (2, 100, 20), (3, 120, 30)]
 items_sorted = sorted(items, key=lambda item: item[2]/item[1])
 
 
-def fractionalKnapsack(item, x):
+def fractionalKnapsack(items, x):
     limit = x
     result = 0
     for i in range(len(items_sorted)):
@@ -22,7 +22,7 @@ def fractionalKnapsack(item, x):
                 limit -= cur[2]
                 result += cur[1]
             else:
-                result += cur[1]/cur[2]*limit
+                result += int(cur[1]/cur[2])*limit
                 limit = 0
         else:
             break
