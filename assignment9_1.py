@@ -16,13 +16,13 @@ def fractionalKnapsack(items, x):
     limit = x
     result = 0
     for i in range(len(items_sorted)):
-        cur = items_sorted[i]
+        item = items_sorted[i]
         if(limit > 0):
-            if(limit > cur[2]):
-                limit -= cur[2]
-                result += cur[1]
+            if(limit > item[2]):
+                limit -= item[2]
+                result += item[1]
             else:
-                result += int(cur[1]/cur[2])*limit
+                result += int(item[1]/item[2])*limit
                 limit = 0
         else:
             break
