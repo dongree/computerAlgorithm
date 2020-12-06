@@ -23,6 +23,17 @@ def minmult(d):
     return M, P
 
 
+def order(i, j):
+    if(i == j):
+        print("A%d" % i, end="")
+    else:
+        k = P[i][j]
+        print("(", end="")
+        order(i, k)
+        order(k+1, j)
+        print(")", end="")
+
+
 INF = 999
 d = [5, 2, 3, 4, 6, 7, 8]
 M, P = minmult(d)
@@ -32,3 +43,6 @@ for i in range(1, len(M)):
 print('P = ')
 for i in range(1, len(P)):
     print(P[i][1:])
+
+
+order(1, 6)
